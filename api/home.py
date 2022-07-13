@@ -11,13 +11,14 @@ def page():
         #lista = funcao(hash_tag)
         # chamar classificador (modelo) passando a lista dos 10 twitters mais curtidos
         
-        pesquisa={hash_tag}
-        sentimentos_negativos = {"🤮","🤢","🤬","😡","😠","💩"}
-        sentimentos_positivos = {"😍", "🥰", "😋","🤩","😀","😇"}
-        queries_positivos = td.create_queries(pesquisa, sentimentos_positivos)
-        queries_negativos = td.create_queries(pesquisa, sentimentos_negativos)
-        tweets_positivos = td.search(2, queries_positivos); # 50k tweets
-        tweets_negativos = td.search(2, queries_negativos); # 50k tweets
+        #pesquisa={hash_tag}
+        lista = ['mcdonalds']
+        #sentimentos_negativos = {"🤮","🤢","🤬","😡","😠","💩"}
+        #sentimentos_positivos = {"😍", "🥰", "😋","🤩","😀","😇"}
+        #queries_positivos = td.create_queries(pesquisa, sentimentos_positivos)
+        #queries_negativos = td.create_queries(pesquisa, sentimentos_negativos)
+        tweets_positivos = td.search(500, lista); # 50k tweets
+        #tweets_negativos = td.search(500, queries_negativos); # 50k tweets
         st.write(tweets_positivos)
-        st.write(tweets_negativos)
+        #st.write(tweets_negativos)
         
