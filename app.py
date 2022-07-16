@@ -1,14 +1,10 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-#import home
-import analise_comparativa
-import analise_exploratoria
-#import classificador
-import sobre
-import tweets_downloader 
+from src.app import home, classificador, analise_exploratoria, analise_comparativa, sobre
+#from src.data import tweets_downloader
 
 #from st_on_hover_tabs import on_hover_tabs
-#from src.app import classificador, analise_exploratoria, analise_comparativa, sobre
+
 
 #st.title("Análise de sentimentos em dados do Twitter")
 
@@ -23,8 +19,7 @@ with st.sidebar:
     )
 
 if selected == "Home":
-    #home.page()
-    print('ok') #AOAGAR
+    home.page()
     #tweets_downloader.page()
     #st.write("Home")
 if selected == "Classificador":
@@ -35,7 +30,7 @@ if selected == "Análise exploratória":
     st.write("Análise exploratória")
 if selected == "Análise comparativa":
     analise_comparativa.page()
-    st.write("Análise comparativa")
+    st.write("Análise comparativ")
 if selected == "Sobre":
     #sobre.page()
     sobre.teste()
